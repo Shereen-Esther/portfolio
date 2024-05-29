@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shereen-portfolio';
+  scrollTop = 0;
+  hideNav = false;
+
+  // onScroll(event) {
+  //   this.hideNav = this.scrollTop < event.target.scrollTop;
+  //   this.scrollTop = event.target.scrollTop;
+  // }
 }

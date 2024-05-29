@@ -1,23 +1,13 @@
-<nav class="nav">
-  <ul>
-      
-      <li>
-          <a href="#home-page">Home</a>
-      </li>
-      <li>
-          <a href="#about-section">About</a>
-      </li>
-      <li >
-          <a href="#works-section">Works</a>
-      </li>
-      <li >
-          <a href="#skills-section">Skills</a>
-      </li>
-  </ul>
-</nav>
-<app-home id="home-page"></app-home>
-<app-about id="about-section"></app-about>
-<app-works id="works-section"></app-works>
-<app-skills id="skills-section"></app-skills>
-<app-interests id="interests-section"></app-interests>
-<app-contact id="contact-section"></app-contact>
+<div style="overflow: scroll; height: 100%; width: 100%;">
+    <div class="" style="position: sticky;top: 0;">
+        <app-navbar class="nav" [class.hide-nav]="hideNav" style="position: sticky;top: 0;"></app-navbar>
+    </div>
+    <app-home id="home-page"></app-home>
+    <!-- <div class="container" (scroll)="onScroll($event)"> -->
+    
+    <app-about id="about-section"></app-about>
+    <app-works id="works-section"></app-works>
+    <app-skills id="skills-section"></app-skills>
+    <app-interests id="interests-section"></app-interests>
+    <app-contact id="contact-section"></app-contact>
+</div>

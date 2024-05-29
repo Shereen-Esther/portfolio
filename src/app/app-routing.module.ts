@@ -8,7 +8,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { WorksComponent } from './works/works.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/Home', pathMatch: 'full' },
+  // { path: '', redirectTo: '/Home', pathMatch: 'full' },
   {path: 'Home', component: HomeComponent},
   {path: 'About', component: AboutComponent},
   {path: 'Skills', component: SkillsComponent},

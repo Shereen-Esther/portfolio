@@ -1,4 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
-html {
+*{
     scroll-behavior: smooth;
-   }
+}
+
+* {
+    margin: 0;
+    font-family: 'MyFont';
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../../shereen-portfolio/src/assets/bg_image_5.png);
+    background-size: cover;
+    position: fixed;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('../../portfolio/src/assets/Jaldi/Jaldi-Regular.ttf');
+}
+
+.container {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+nav {
+    position: sticky;
+}
