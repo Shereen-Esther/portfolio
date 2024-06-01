@@ -1,26 +1,28 @@
 nav {
-    position: sticky;
+     
 }
-
 .nav-container {
-    position: sticky;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    // position: sticky;
     display: flex; 
+    height: 10vh;
     width: 100vw;
-    height: 7vh; 
-    background-color: beige; 
+    background-color: #faf9f7; 
 }
-
 a {
     color: black;
     text-decoration: none;
-    font-size: x-large;
+    font-size: large;
 }
- button {
+button {
     border: 0cm;
-    background-color: beige;
-    height: 100%;
- }
-
+    background-color: #FAF9F7;
+    height: 40%;
+    margin: auto;
+    border-radius: 5px;
+}
 button:hover {
     background-color: black;
 }

@@ -1,0 +1,40 @@
+.works-container {
+    height: 100%;
+    width: 100%;
+    background-color: #FAF9F7;
+}
+img {
+    width: 150px;
+    margin: auto;
+    margin-bottom: -70px;
+    cursor: pointer;
+}
+.hp-logo {
+    width: 200px;
+    margin-bottom: -55px;
+}
+.decor-box4 {
+    width: 100%;
+    height: 25%;
+    background-color: #FAF9F7;
+    display: flex;
+}
+.decor-box5 {
+    width: 100%;
+    height: 65%;
+    background-color: #E8E4E1;
+    display: flex;
+}
+h1 {
+    margin-left: auto;
+}
+.text-box {
+    height: 80%;
+    width: 25%;
+    margin: auto;
+}
+.content {
+    height: 80%;
+    width: 100%;
+    overflow: scroll;
+}

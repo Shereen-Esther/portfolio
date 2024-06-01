@@ -1,0 +1,50 @@
+.about-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    z-index: -1;
+    background-color: #FAF9F7;
+}
+.name-box {
+    height: 20%;
+    width: 30%;
+    margin: auto;
+    display: flex;
+}
+.name {
+    color: white;
+    font-size: 70px;
+    margin: auto;
+    text-decoration-line: 3px;
+    text-decoration-color: black;
+}
+.decor-box {
+    width: 30%;
+    height: 60%;
+    background-color: #E8E4E1;
+    margin-top: 15%;
+}
+.decor-box1 {
+    height: 60%;
+    position: absolute;
+    margin: 10% 5%;
+}
+img {
+    height: 100%;
+}
+.decor-box2 {
+    height: 70%;
+    width: 50%;
+    margin-top: 15%;
+    margin-left: 15%;
+    // margin: auto 0rem auto 14rem;
+}
+.content {
+    font-size: 15px;
+    font-weight: 100;
+    margin: 10px 0px;
+}
+h1 {
+    font-size: 48.7px;
+}
