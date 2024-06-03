@@ -1,29 +1,50 @@
-<div class="container">
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
-    <p> Skills ehhhh</p>
+<div class="skills-container">
+    <div style="height: 5%; width: 100%; background-color: #E8E4E1;"></div>
+    <div style="height: 5%; width: 100%; background-color: #DACABD;"></div>
+    <div class="header">
+        <h1>SKILLS</h1>
+    </div>
+    <div class="main-container">
+        <div *ngFor="let skill of skills" class="main-div">
+            <div  class="skill-box">
+                <img class="skill-logo" [src]="skill.logo">
+                <div class="skill-heading">{{skill.name}}</div>
+                <div *ngIf="skill.No_of_Stars === 1" class="skill-stars">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star empty.png">
+                    <img class="star" src="../../assets/star empty.png">
+                    <img class="star" src="../../assets/star empty.png">
+                    <img class="star" src="../../assets/star empty.png">
+                </div>
+                <div *ngIf="skill.No_of_Stars === 2" class="skill-stars">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star empty.png">
+                    <img class="star" src="../../assets/star empty.png">
+                    <img class="star" src="../../assets/star empty.png">
+                </div>
+                <div *ngIf="skill.No_of_Stars === 3" class="skill-stars">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star empty.png">
+                    <img class="star" src="../../assets/star empty.png">
+                </div>
+                <div *ngIf="skill.No_of_Stars === 4" class="skill-stars">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star empty.png">
+                </div>
+                <div *ngIf="skill.No_of_Stars === 5" class="skill-stars">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star full.png">
+                    <img class="star" src="../../assets/star full.png">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
