@@ -1,0 +1,36 @@
+.contact-container {
+    height: 100%;
+    width: 100%;
+    background-color: #FAF9F7;
+}
+.main-container {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.decorbox {
+    height: 35%;
+    width: 70%;
+    background-color: #E8E4E1;
+    margin: 0px auto;
+}
+.photo {
+    height: 40%;
+    width: 25%;
+    background-image: url('../../assets/Shereen_SCasual.jpeg');
+    background-size:cover;
+    margin: -10% auto;
+}
+.heading {
+    font-size: 48.7px; 
+    margin-bottom: 5%;
+    margin: auto;
+    margin-top: 12%;
+}
+.contact-details {
+    height: 30%;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
