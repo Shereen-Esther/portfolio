@@ -12,6 +12,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { WorksComponent } from './works/works.component';
 import { CommonModule } from '@angular/common';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     InterestsComponent,
     NavbarComponent,
     SkillsComponent,
-    WorksComponent
+    WorksComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
