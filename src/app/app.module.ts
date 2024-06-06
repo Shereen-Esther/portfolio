@@ -13,6 +13,7 @@ import { WorksComponent } from './works/works.component';
 import { CommonModule } from '@angular/common';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { ProjectsComponent } from './projects/projects.component';
+import { CarouselModule } from './carousel/carousel.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProjectsComponent } from './projects/projects.component';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    ScrollingModule
+    ScrollingModule,
+    CarouselModule
   ],
   providers: [
     provideClientHydration()
