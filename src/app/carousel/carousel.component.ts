@@ -24,6 +24,11 @@ export class CarouselComponent implements OnInit {
     //   this.autoSlideImages();
     // }
   }
+  temp(): void {
+    if(this.autoSlide) {
+        this.autoSlideImages();
+    }
+  }
   autoSlideImages(): void {
     setInterval(() => {
       this.onNextSlide();
