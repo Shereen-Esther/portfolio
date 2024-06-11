@@ -1,7 +1,10 @@
 .projects-container {
     height: 100%;
     width: 100%;
-    background-color: #FAF9F7;
+    background-color: #DACABD;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
 }
 .decor-box4 {
     display: flex;
@@ -9,4 +12,9 @@
 h1 {
     margin-left: auto;
     margin-right: auto;
+}
+.projects {
+    height: 70%;
+    width: 70%;
+    margin: auto;
 }

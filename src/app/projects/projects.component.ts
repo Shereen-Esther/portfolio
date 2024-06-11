@@ -8,24 +8,42 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   images = [
     {
-      imageSrc: '../../assets/bg_image_3.png',
+      imageSrc: '../../assets/projects/T9.png',
       imageAlt: 'no'
     },
     {
-      imageSrc: '../../assets/bg_image_4.png',
+      imageSrc: '../../assets/projects/Recipe.png',
       imageAlt: 'no'
     },
     {
-      imageSrc: '../../assets/bg_image_5.png',
+      imageSrc: '../../assets/projects/Reimbursement.png',
       imageAlt: ''
     },
     {
-      imageSrc: '../../assets/bg_image_6.jpeg',
+      imageSrc: '../../assets/projects/Eye.png',
       imageAlt: ''
     },
     {
-      imageSrc: '../../assets/bg_image_5.jpeg',
+      imageSrc: '../../assets/projects/Blood.png',
+      imageAlt: ''
+    },
+    {
+      imageSrc: '../../assets/projects/CC.png',
+      imageAlt: ''
+    },
+    {
+      imageSrc: '../../assets/projects/E-commerce.png',
       imageAlt: ''
     }
   ];
+  x = 0;
+  myFunction() {
+    this.x += 1;
+    // document.body.get
+  }
 }
+
+    // if(this.autoSlide) {
+    //   this.autoSlideImages();
+    // }
+    // document.body.style.backgroundColor = "red";

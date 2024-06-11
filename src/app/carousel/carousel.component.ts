@@ -19,16 +19,8 @@ export class CarouselComponent implements OnInit {
 
   selectedIndex = 0;
 
-  ngOnInit(): void {
-    // if(this.autoSlide) {
-    //   this.autoSlideImages();
-    // }
-  }
-  temp(): void {
-    if(this.autoSlide) {
-        this.autoSlideImages();
-    }
-  }
+  ngOnInit(): void {  }
+  
   autoSlideImages(): void {
     setInterval(() => {
       this.onNextSlide();
@@ -46,4 +38,10 @@ export class CarouselComponent implements OnInit {
   selectImage(index:number): void {
     this.selectedIndex = index;
   }
+
+  // myFunction() {
+  //   if(this.autoSlide) {
+  //     this.autoSlideImages();
+  //   }
+  // }
 }
