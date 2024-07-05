@@ -122,12 +122,6 @@ export class SkillsComponent {
       skill_category: "DB"
     },
     {
-      name: "PostgreSQL",
-      logo: '../../assets/Skill Logos/PSQL.png',
-      No_of_Stars: 2,
-      skill_category: "DB"
-    },
-    {
       name: "Git",
       logo: '../../assets/Skill Logos/Git.png',
       No_of_Stars: 4,
