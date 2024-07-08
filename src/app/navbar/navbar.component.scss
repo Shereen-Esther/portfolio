@@ -1,14 +1,14 @@
 .nav-container {
     top: 0;
-    position: absolute;
-    z-index: 1;
+    position: relative;
+    z-index: 999 !important;
     display: flex; 
     height: 10vh;
     width: 100vw;
     background-color: #faf9f7; 
 }
 .navbar {
-    width: 50%;
+    width: 40%;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -33,7 +33,7 @@ button:hover {
     background-color: black;
 }
 a:hover {
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: #7D7C7B !important;
     border-radius: 15px !important;
     color: white !important;
 }
