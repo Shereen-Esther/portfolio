@@ -30,13 +30,25 @@
 }
 .contact-details {
     height: 30%; 
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
+    width: 50%;
     margin: 0 auto;
-    margin-top: 5rem;
+    text-align: center;
+    margin-top: 1rem;
 }
 img {
     cursor: pointer;
     height: 30px;
+}
+button {
+    background-color: #E8E4E1;
+    padding: 10px 20px;
+    border: 1px solid black;
+    margin-top: 2rem;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 40px;
+}
+button:hover {
+    background-color: #A99F93;
+    color: white;
 }
