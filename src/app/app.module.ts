@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { ProjectsComponent } from './projects/projects.component';
 import { CarouselModule } from './carousel/carousel.module';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CarouselModule } from './carousel/carousel.module';
     NavbarComponent,
     SkillsComponent,
     WorksComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
