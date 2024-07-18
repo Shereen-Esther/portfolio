@@ -1,7 +1,7 @@
 <div *ngIf="images && images.length > 0" class="carousel-container">
-    <img *ngFor="let image of images; let i=index" [src]="image.imageSrc" [alt]="image.imageAlt"
+    <img style="width: 45%;" *ngFor="let image of images; let i=index" [src]="image.imageSrc" [alt]="image.imageAlt"
         [ngClass]="{'image-active': selectedIndex === i }" class="fade">
-    <div class="content">
+    <div style="width: 40%; height: 80%; margin: auto;" class="content">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
