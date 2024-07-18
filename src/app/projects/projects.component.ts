@@ -7,20 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
   images = [
+    // {
+    //   imageSrc: '../../assets/projects/E-commerce.png',
+    //   imageAlt: ''
+    // },
     {
-      imageSrc: '../../assets/projects/T9.png',
-      imageAlt: 'no'
-    },
-    {
-      imageSrc: '../../assets/projects/Recipe.png',
-      imageAlt: 'no'
-    },
-    {
-      imageSrc: '../../assets/projects/Reimbursement.png',
-      imageAlt: ''
-    },
-    {
-      imageSrc: '../../assets/projects/Eye.png',
+      imageSrc: '../../assets/projects/CC.png',
       imageAlt: ''
     },
     {
@@ -28,12 +20,20 @@ export class ProjectsComponent {
       imageAlt: ''
     },
     {
-      imageSrc: '../../assets/projects/CC.png',
+      imageSrc: '../../assets/projects/Eye.png',
       imageAlt: ''
     },
     {
-      imageSrc: '../../assets/projects/E-commerce.png',
+      imageSrc: '../../assets/projects/Reimbursement.png',
       imageAlt: ''
+    },
+    {
+      imageSrc: '../../assets/projects/Recipe.png',
+      imageAlt: 'no'
+    },
+    {
+      imageSrc: '../../assets/projects/T9.png',
+      imageAlt: 'no'
     }
   ];
   x = 0;
