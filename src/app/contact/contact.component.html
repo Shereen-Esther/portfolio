@@ -14,8 +14,11 @@
                 out. <br>
                 Let's collaborate and make something great!
             </div>
-            <button>Contact</button>
+            <button (click)="popupAction()">Contact</button>
         </div>
+    </div>
+    <div class="popup-container" [class.show]="popup">
+        <app-popup (closePopup)="popupAction()"></app-popup>
     </div>
 </div>
 

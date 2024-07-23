@@ -170,12 +170,8 @@ export class SkillsComponent {
       skill_category: "IDE"
     },
   ]
-  /* 
-  skills = [{
-    name: String;
-    logo: Imageurl;
-    No_of_Stars: double;
-    skill_category: All | Web Technologies | Databases | Frameworks | OS | Code Repositories | Package Manager | IDEs | Other Technologies;
-  }]
-  */
+  popup = false;
+  popupAction() {
+    this.popup = !this.popup;
+  }
 }

@@ -51,4 +51,24 @@ button {
 button:hover {
     background-color: #A99F93;
     color: white;
+    border: none;
 }
+/* contact.component.css */
+.popup-container {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.212);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .popup-container.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  

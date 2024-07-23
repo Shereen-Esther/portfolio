@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-
+  popup = false;
+  popupAction() {
+    this.popup = !this.popup;
+  }
 }
