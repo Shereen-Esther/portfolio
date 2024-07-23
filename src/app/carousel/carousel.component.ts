@@ -1,8 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-interface carouselImage {
+interface projectCarousel {
   imageSrc: string;
-  imageAlt: string;
+  title: string,
+  description: string,
+  duration: string,
+  softwareStack: string,
+  link: string
 }
 
 @Component({
@@ -11,7 +15,7 @@ interface carouselImage {
   styleUrl: './carousel.component.scss'
 })
 export class CarouselComponent implements OnInit {
-  @Input() images: carouselImage[] = []
+  @Input() projects: projectCarousel[] = [];
   @Input() indicators = true;
   @Input() controls = true;
   @Input() autoSlide = false;
@@ -19,15 +23,15 @@ export class CarouselComponent implements OnInit {
 
   selectedIndex = 0;
 
-  ngOnInit(): void {  }
-  
+  ngOnInit(): void { }
+
   autoSlideImages(): void {
     setInterval(() => {
       this.onNextSlide();
-    },this.slideInterval)
+    }, this.slideInterval)
   }
   onNextSlide(): void {
-    if(this.selectedIndex === this.images.length - 1) {
+    if (this.selectedIndex === this.projects.length - 1) {
       this.selectedIndex = 0;
     }
     else {
@@ -35,7 +39,7 @@ export class CarouselComponent implements OnInit {
     }
   }
 
-  selectImage(index:number): void {
+  selectImage(index: number): void {
     this.selectedIndex = index;
   }
 

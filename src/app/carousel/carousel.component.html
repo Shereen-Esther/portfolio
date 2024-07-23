@@ -1,36 +1,19 @@
-<div *ngIf="images && images.length > 0" class="carousel-container">
-    <img style="width: 45%;" *ngFor="let image of images; let i=index" [src]="image.imageSrc" [alt]="image.imageAlt"
+<div *ngIf="projects && projects.length > 0" class="carousel-container">
+    <img style="width: 45%;" *ngFor="let project of projects; let i=index" [src]="project.imageSrc"
         [ngClass]="{'image-active': selectedIndex === i }" class="fade">
-    <div style="width: 40%; height: 80%; margin: auto;" class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
+
+    <div *ngFor="let project of projects; let i=index" [ngClass]="{'content-active': selectedIndex === i }" class="content fade">
+        <div class="title"> {{project.title}}</div>
+        <div class="duration"> {{ project.duration }} </div>
+        <div class="desc"> {{ project.description }} </div>
+        <b><i>Software Stack</i></b><br>
+        <div class="stack"> {{ project.softwareStack }} </div>
+        <!-- <button>Link</button> -->
+        <!-- <div class="link"> {{ project.link }} </div> -->
     </div>
 
     <div *ngIf="indicators" class="carousel-dot-container">
-        <span *ngFor="let dot of images; let i=index" class="dot" [ngClass]="{'active': selectedIndex === i}"
+        <span *ngFor="let dot of projects; let i=index" class="dot" [ngClass]="{'active': selectedIndex === i}"
             (click)="selectImage(i)">
         </span>
     </div>
