@@ -11,4 +11,8 @@ export class PopupComponent {
   public close(): void {
     this.closePopup.emit();
   }
+
+  public noClose(): void {
+    
+  }
 }

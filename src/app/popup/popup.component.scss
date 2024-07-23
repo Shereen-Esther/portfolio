@@ -6,12 +6,12 @@
     flex-direction: column;
     position: absolute;
     top:0;
-    z-index: 9999 !important;
+    z-index: 9999;
 }
 .popup {
     margin: auto;
-    height: 40%;
-    width: 40%;
+    height: 60%;
+    width: 30%;
     background-color: white;
     border-radius: 20px;
 }
