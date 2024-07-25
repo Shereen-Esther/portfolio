@@ -1,28 +1,30 @@
 <div class="popup-container">
     <div class="popup">
-        <img (click)="close()" src="../../assets/icons/close.png">
+        <img class="icon" style="cursor: pointer;" (click)="close()" src="../../assets/icons/left_arrow.svg">
         <div class="inside-popup">
-            <div style="display: flex; height: 1rem; align-items: center;">
-                <img src="../../assets/icons/phone.png">
+            <div class="contact-info">
+                <img class="icon" src="../../assets/icons/phone.png">
                 <div> +1 (937) 554 - 6043</div>
             </div>
-            <div style="display: flex; height: 1rem; align-items: center;">
-                <img src="../../assets/icons/email.png">
+            <div class="contact-info">
+                <img class="icon" src="../../assets/icons/email.png">
                 <div> shereenjubal1&#64;gmail.com</div>
             </div>
-            <div style="display: flex; height: 1rem; align-items: center;">
-                <img src="../../assets/icons/location.png">
+            <div class="contact-info">
+                <img class="icon" src="../../assets/icons/location.png">
                 <div> Dayton, OH</div>
             </div>
-            <div style="display: flex; height: 1rem; align-items: center;">
-                <img src="../../assets/icons/github.png">
+            <div class="icons-container">
+                <div>
+                    <img class="icon-button" src="../../assets/icons/github.png">
+                </div>
+                <div>
+                    <img class="icon-button" src="../../assets/icons/linkedin.png">
+                </div>
             </div>
-            <div style="display: flex; height: 1rem; align-items: center;">
-                <img src="../../assets/icons/linkedin.png">
-            </div>
-            <div style="display: flex; height: 1rem; align-items: center;">
-                Resume Download
-            </div>
+            <button class="">
+                Download Resume 
+            </button>
         </div>
     </div>
 </div>
