@@ -1,87 +1,58 @@
-import { Component } from '@angular/core';
-import { ScrollService } from '../scroll.service';
+import { Component, OnInit, Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
-  constructor(private scrollService: ScrollService) { }
-  scrollTo(section: any): void {
-    const element = document.getElementById(section);
+export class NavbarComponent implements OnInit, AfterViewInit {
+  activeSection: string = 'about-section';
+  isBrowser: boolean;
 
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-    }
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 
-    
-    const asElement = document.getElementById("as");
-    const wsElement = document.getElementById("ws");
-    const ssElement = document.getElementById("ss");
-    const psElement = document.getElementById("ps");
-    const isElement = document.getElementById("is");
-    const csElement = document.getElementById("cs");
+  ngOnInit() {
+    if (this.isBrowser) {
+      this.scrollToSection('about-section');
+    }
+  }
 
-    if (asElement) {
-      if (element?.id === "about-section") {
-        asElement.style.backgroundColor = "#7D7C7B";
-        asElement.style.color = "white";
-        asElement.style.borderRadius = "15px";
-      } else {
-        asElement.style.backgroundColor = "#faf9f7";
-        asElement.style.color = "black";
+  ngAfterViewInit() {
+    if (this.isBrowser) {
+      this.setupIntersectionObserver();
+    }
+  }
+
+  scrollToSection(sectionId: string) {
+    if (this.isBrowser) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        this.activeSection = sectionId;
       }
     }
-    if (wsElement) {
-      if (element?.id === "works-section") {
-        wsElement.style.backgroundColor = "#7D7C7B";
-        wsElement.style.color = "white";
-        wsElement.style.borderRadius = "15px";
-      } else {
-        wsElement.style.backgroundColor = "#faf9f7";
-        wsElement.style.color = "black";
-      }
-    }
-    if (ssElement) {
-      if (element?.id === "skills-section") {
-        ssElement.style.backgroundColor = "#7D7C7B";
-        ssElement.style.color = "white";
-        ssElement.style.borderRadius = "15px";
-      } else {
-        ssElement.style.backgroundColor = "#faf9f7";
-        ssElement.style.color = "black";
-      }
-    }
-    if (psElement) {
-      if (element?.id === "projects-section") {
-        psElement.style.backgroundColor = "#7D7C7B";
-        psElement.style.color = "white";
-        psElement.style.borderRadius = "15px";
-      } else {
-        psElement.style.backgroundColor = "#faf9f7";
-        psElement.style.color = "black";
-      }
-    }
-    if (isElement) {
-      if (element?.id === "interests-section") {
-        isElement.style.backgroundColor = "#7D7C7B";
-        isElement.style.color = "white";
-        isElement.style.borderRadius = "15px";
-      } else {
-        isElement.style.backgroundColor = "#faf9f7";
-        isElement.style.color = "black";
-      }
-    }
-    if (csElement) {
-      if (element?.id === "contact-section") {
-        csElement.style.backgroundColor = "#7D7C7B";
-        csElement.style.color = "white";
-        csElement.style.borderRadius = "15px";
-      } else {
-        csElement.style.backgroundColor = "#faf9f7";
-        csElement.style.color = "black";
-      }
-    }
+  }
+
+  setupIntersectionObserver() {
+    const sections = document.querySelectorAll('app-about, app-works, app-skills, app-projects, app-contact');
+    const options = {
+      root: null,
+      threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.activeSection = entry.target.id;
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
   }
 }
