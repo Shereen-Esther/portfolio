@@ -3,15 +3,17 @@
     width: 100%;
     background-color: #FAF9F7;
 }
-img {
+a {
     width: 150px;
     cursor: pointer;
     margin: auto;
     margin-bottom: -60px;
 }
+img {
+    width: 100%;
+}
 .hp-logo {
     width: 200px;
-    margin-bottom: -55px;
 }
 .decor-box4 {
     width: 100%;
@@ -46,6 +48,7 @@ h2,h3 {
     width: 100%;
     overflow: scroll;
     margin-top: 5%;
+    text-align: justify;
 }
 .logo {
     display: flex;
