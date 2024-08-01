@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
 }
+
 .nav-container {
     top: 0;
     position: relative;
@@ -10,6 +11,16 @@ body {
     width: 100vw;
     background-color: #faf9f7;
 }
+
+.logo {
+    font-size: 40px;
+    margin-left: 40px;
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: 900;
+}
+
 nav {
     background-color: #faf9f7;
     position: sticky;
@@ -18,6 +29,7 @@ nav {
     margin-top: auto;
     margin-bottom: auto;
 }
+
 ul {
     list-style: none;
     display: flex;
@@ -25,12 +37,14 @@ ul {
     margin: 0;
     padding: 0;
 }
+
 li {
     cursor: pointer;
     padding: 15px 15px;
     font-size: large;
     font-weight: 100;
 }
+
 li.active {
     background-color: #7D7C7B !important;
     border-radius: 10px !important;
@@ -38,9 +52,22 @@ li.active {
     // border-bottom: 1px solid black;
     // font-weight: 900;
 }
+
 li:hover {
     background-color: #7D7C7B !important;
     border-radius: 10px !important;
     color: white !important;
     // border-bottom: 1px solid black;
+}
+
+@media (width <=800px) {
+    nav {
+        display: none;
+        width: 0px;
+    }
+
+    .logo {
+        font-size: 35px;
+        width: 100%;
+    }
 }
