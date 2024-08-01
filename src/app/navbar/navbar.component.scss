@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-  }
+}
 .nav-container {
     top: 0;
     position: relative;
@@ -27,16 +27,20 @@ ul {
 }
 li {
     cursor: pointer;
-    padding: 15px 20px;
+    padding: 15px 15px;
     font-size: large;
+    font-weight: 100;
 }
 li.active {
     background-color: #7D7C7B !important;
-    border-radius: 15px !important;
+    border-radius: 10px !important;
     color: white !important;
+    // border-bottom: 1px solid black;
+    // font-weight: 900;
 }
 li:hover {
     background-color: #7D7C7B !important;
-    border-radius: 15px !important;
+    border-radius: 10px !important;
     color: white !important;
+    // border-bottom: 1px solid black;
 }
