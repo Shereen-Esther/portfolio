@@ -1,5 +1,5 @@
 <div *ngIf="projects && projects.length > 0" class="carousel-container">
-    <img style="width: 45%;" *ngFor="let project of projects; let i=index" [src]="project.imageSrc"
+    <img *ngFor="let project of projects; let i=index" [src]="project.imageSrc"
         [ngClass]="{'image-active': selectedIndex === i }" class="fade">
 
     <div *ngFor="let project of projects; let i=index" [ngClass]="{'content-active': selectedIndex === i }" class="content fade">
@@ -9,8 +9,6 @@
         <b><i>Software Stack</i></b><br>
         <div class="stack"> {{ project.softwareStack }} </div>
         <a [href]="project.link">Link</a>
-        <!-- <button>Link</button> -->
-        <!-- <div class="link"> {{ project.link }} </div> -->
     </div>
 
     <div *ngIf="indicators" class="carousel-dot-container">
@@ -18,9 +16,4 @@
             (click)="selectImage(i)">
         </span>
     </div>
-
-    <!-- <div *ngIf="controls" class="btn-carousel btn-prev">
-        <i class="fas fa-arrow-circle-left icon-carousel icon-prev"></i>
-         <img src="../../assets/left_arrow.svg" style="height: 40px; width: 40px; border-radius: 100%;">
-    </div> -->
 </div>
