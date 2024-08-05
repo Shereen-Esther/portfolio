@@ -65,3 +65,20 @@ button:hover {
     background-color: #393A41;
     color: white;
 }
+
+@media (max-width: 800px) {
+    .popup {
+        margin: auto;
+        height: 60%;
+        width: 80%;
+        background-color: #faf9f7;
+        border-radius: 20px;
+    }
+    button {
+        background-color: #393A41;
+        color: white;
+    }
+    .contact-info {
+        width: 85%;
+    }
+}
