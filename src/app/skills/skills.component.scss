@@ -34,7 +34,7 @@ h1 {
     flex-direction: column;
 }
 .skill-box:hover {
-    // filter: drop-shadow(0 0 0.5rem gray);
+    filter: drop-shadow(0 0 0.5rem gray);
     cursor: pointer;
 }
 .skill-logo {
@@ -63,6 +63,13 @@ h1 {
     }
     .skill-box {
         width: 80%;
-        height: 60%;
+        height: 6rem;
+        margin-top: 3rem;
     }
-  }
+    .main-container {
+        overflow: visible;
+    }
+    .skills-container {
+        height: auto;
+    }
+}
