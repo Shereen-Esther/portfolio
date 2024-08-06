@@ -1,12 +1,9 @@
-
 *{
     scroll-behavior: smooth;
-}
-
-
-* {
     margin: 0;
     font-family: 'MyFont';
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
 }
 
 body {
