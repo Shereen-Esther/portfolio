@@ -41,3 +41,25 @@ h2,h3 {
     margin-top: 5%;
     text-align: justify;
 }
+
+@media (max-width: 800px) {
+    .works-container {
+        height: auto;
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        background-color: #FAF9F7;
+    }
+    .work {
+        width: 85%;
+        margin: auto;
+    }
+    .content {
+        height: auto;
+        margin-bottom: 2rem;
+    }
+    .work img {
+        height: 100px;
+    }
+}
