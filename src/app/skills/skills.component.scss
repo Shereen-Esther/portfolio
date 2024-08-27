@@ -50,6 +50,9 @@ h1 {
     margin-top: 5%;
 }
   @media (max-width: 800px) {
+    .header {
+        padding-top: 2rem;
+    }
     .main-div {
         width: 50%;
         height: 20%;
