@@ -7,9 +7,11 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit, AfterViewInit {
+  
   activeSection: string = 'about-section';
   isBrowser: boolean;
   navbar: number = 1;
+  sideNavBar: boolean = false;
 
   constructor(@Inject(PLATFORM_ID) private platformId: any) {
     this.isBrowser = isPlatformBrowser(this.platformId);
@@ -19,11 +21,8 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     if (this.isBrowser) {
       this.scrollToSection('about-section');
     }
-    if(typeof window !== 'undefined' && window.matchMedia('(max-width: 800px)').matches) {
+    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 800px)').matches) {
       this.navbar = 0;
-    }
-    else {
-      this.navbar = 1;
     }
   }
 
@@ -61,5 +60,9 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     sections.forEach(section => {
       observer.observe(section);
     });
+  }
+
+  openSideNav() {
+    this.sideNavBar = !this.sideNavBar;
   }
 }
