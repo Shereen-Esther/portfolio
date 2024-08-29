@@ -15,6 +15,21 @@
         </ul>
     </nav>
     <nav *ngIf="navbar === 0">
-        <div style="height: 30px; width: 30px; background-color: aqua;"></div>
+        <img (click)="openSideNav()" class="navIcon" src="../../assets/icons/navigation.png">
     </nav>
+    <div *ngIf="sideNavBar" class="sideNavBar-container">
+        <div class="sideNavBar">
+            <img (click)="openSideNav()" class="navCloseIcon" src="../../assets/icons/left_arrow.svg">
+            <ul>
+                <li (click)="scrollToSection('about-section')" [class.active]="activeSection === 'about-section'">ABOUT</li>
+                <li (click)="scrollToSection('works-section')" [class.active]="activeSection === 'works-section'">WORKS</li>
+                <li (click)="scrollToSection('skills-section')" [class.active]="activeSection === 'skills-section'">SKILLS
+                </li>
+                <li (click)="scrollToSection('projects-section')" [class.active]="activeSection === 'projects-section'">
+                    PROJECTS</li>
+                <li (click)="scrollToSection('contact-section')" [class.active]="activeSection === 'contact-section'">
+                    CONTACT</li>
+            </ul>
+        </div>
+    </div>
 </div>
