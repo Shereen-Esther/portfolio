@@ -67,7 +67,44 @@ li:hover {
     // }
 
     .logo {
-        font-size: 35px;
+        font-size: 32px;
         width: 100%;
+    }
+
+    .navIcon {
+        height: 20px;
+        width: 22px;
+        float: right;
+        margin-right: 2rem;
+    }
+
+    .sideNavBar-container {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.324);
+    }
+
+    .sideNavBar {
+        height: 100%;
+        width: 70%;
+        background-color: #faf9f7;
+        position: absolute;
+        right: 0;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .navCloseIcon {
+        height: 20px;
+        float: left;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
+    ul {
+        margin: 1rem;
+        margin-top: 5rem;
+        flex-direction: column;
     }
 }
