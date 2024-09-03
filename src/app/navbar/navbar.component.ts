@@ -42,6 +42,17 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     }
   }
 
+  scrollToSectionClose(sectionId: string) {
+    if (this.isBrowser) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        this.activeSection = sectionId;
+      }
+    }
+    this.sideNavBar = !this.sideNavBar;
+  }
+
   setupIntersectionObserver() {
     const sections = document.querySelectorAll('app-about, app-works, app-skills, app-projects, app-contact');
     const options = {
@@ -62,7 +73,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     });
   }
 
-  openSideNav() {
+  toggleSideNav() {
     this.sideNavBar = !this.sideNavBar;
   }
 }
