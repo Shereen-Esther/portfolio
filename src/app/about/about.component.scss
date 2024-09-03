@@ -17,7 +17,6 @@
     width: 30%;
     margin: 10% 0;
     margin-left: -23%;
-    background-color: greenyellow;
 }
 
 .decor-box2 {
@@ -47,7 +46,7 @@ img {
 @media (max-width: 800px) {
     .about-container {
         flex-direction: column;
-        overflow: scroll;
+        height: auto;
     }
 
     .decor-box {
